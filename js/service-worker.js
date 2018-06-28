@@ -1,3 +1,8 @@
+const staticCacheName = 'conv-v1';
+const allCaches = [
+  staticCacheName,
+  //contentImgsCache
+];
 self.addEventListener('fetch', (event)=>{
 
 });
