@@ -1,0 +1,24 @@
+.container{
+    padding-top: 50px;
+}
+.currency, .amount{
+    padding: 10px;
+}
+.currency span, .amount span{
+    padding: 5px;
+}
+.btn .btn-primary{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.panel-body{
+    
+}
+.amount input{
+    width: 10em;
+}
+.panel-group{
+    width: 30em;
+    align-content: center;
+}

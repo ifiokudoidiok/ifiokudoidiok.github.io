@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Free Currency Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/service-worker.js"></script>
+ 
+</head>
+<body onload="loadCurrencies()">
+    <div class="container">
+        <form action="get">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Currencies</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="currency">
+                            <span>From:</span><select id="from"></select>
+                            <span>To:</span> <select id="to"></select>
+                        </div>
+                    </div>
+                    <div class="panel-heading">
+                        <h3>Amount</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="amount">
+                            <input type="text" name="from" id="amount-from">
+                            <p>Result: <span id="result"></span></p>
+                        </div>
+                        <div class="amount-tag">
+
+                        </div>
+                    </div>
+                    <div class="panel-footer submit">
+                        <input type="button" onClick="convertCurrency()" value="Convert" class="btn btn-primary" id="convert">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+            if ('serviceWorker' in navigator) {
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }).catch(function(error) {
+    console.log('Service worker registration failed:', error);
+  });
+} else {
+  console.log('Service workers are not supported.');
+}
+    </script>
+</body>
+</html>
