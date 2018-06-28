@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
         './main.js',
         './main.css',
       ]);
-    })console.log("cached!")
+    })console.log("cached!");
   );
 });
 
