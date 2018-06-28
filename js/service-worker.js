@@ -1,13 +1,22 @@
 self.addEventListener('fetch', (event)=>{
-if ('serviceWorker' in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    console.log('Service worker registration succeeded:', registration);
-  }).catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
-} else {
-  console.log('Service workers are not supported.');
-}
-})
+
+});
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(staticCacheName).then(function(cache) {
+      return cache.addAll([
+        
+        './main.js',
+        './main.css',
+      ]);
+    })console.log("cached!")
+  );
+});
+
+self.addEventListener('message', function(event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
+
