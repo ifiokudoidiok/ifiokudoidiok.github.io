@@ -1,4 +1,4 @@
-import Database from './idb-test/index';
+import Database from './idb-test';
 
 if ('serviceWorker' in navigator) { 
   // Register a service worker hosted at the root of the
