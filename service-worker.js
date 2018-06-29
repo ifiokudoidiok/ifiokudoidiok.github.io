@@ -1,17 +1,13 @@
-/**
- * Create cache when SW installs
- */
 const dataCacheName = 'currency-api-v3';
 const cacheName = 'static-cache-v3';
 
 const filesToCache = [
-  '/ifiokudoidiok.github.io/', // This root url caches normalize.css and google fonts
+  '/ifiokudoidiok.github.io/', 
   './index.html',
-  './main.css',
-  './js/jquery-3.3.1.min.js',
-  './js/main.js',
-  './js',
-  
+  './public/css/styles.min.css',
+  './public/css/styles.min.css.map',
+  './public/js/app.min.js',
+  './public/js/app.min.js.map',
 ];
 
 self.addEventListener('install', e => {
@@ -24,9 +20,6 @@ self.addEventListener('install', e => {
   );
 });
 
-/**
- *  Purge previous cache after activating the next cache
- */
 self.addEventListener('activate', e => {
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
@@ -42,13 +35,10 @@ self.addEventListener('activate', e => {
   );
 });
 
-/**
- * Serve app from cache if there is a cached version
- */
 self.addEventListener('fetch', event => {
   const dataUrl = 'https://free.currencyconverterapi.com/api/v5/currencies';
 
-  // If contacting API, fetch and then cache the new data
+ 
   if (event.request.url.indexOf(dataUrl) === 0) {
     event.respondWith(
       fetch(event.request).then(response =>
