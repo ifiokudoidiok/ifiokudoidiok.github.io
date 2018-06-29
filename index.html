@@ -15,41 +15,37 @@
     <script src="./service-worker.js"></script>
  
 </head>
-<body >
-    <main>
-    <div class="container">
-        <form action="get">
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3>Currencies</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="currency">
-                            <span>From:</span><select class="currency__convert-from"></select>
-                            <span>To:</span> <select class="currency__convert-to"></select>
-                        </div>
-                    </div>
-                    <div class="panel-heading">
-                        <h3>Amount</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="amount">
-                            <input id="amount" name="amount" type="number" placeholder="Enter amount" min="1.0" value="1.00" />
-                            <p>Result: <input id="converted_amount" name="converted_amount" type="text" disabled /></p>
-                        </div>
-                        <div class="amount-tag">
+<body>
+  <!-- Main HTML Markup -->
+  <header>
+    <h1>ALC Currency Converter</h1>
+    <h2>Choose the respective currencies </h2>
+  </header>
 
-                        </div>
-                    </div>
-                    <div class="panel-footer submit">
-                        <input type="button" onClick="convertCurrency()" value="Convert" class="btn btn-primary" id="convert">
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    </main>
+  <main>
+    <section class="section__input">
+      <!-- Input field for the amount to be converted -->
+      <label for="amount">Input the amount:</label>
+      <input id="amount" name="amount" type="number" placeholder="Enter amount" min="1.0" value="1.00" />
+
+      <!-- Currency Select Fields -->
+      <label for="from_currency">Convert From:</label>
+      <select id="from_currency" class="currency__convert-from" aria-label="Filter currency to convert from"></select>
+
+      <label for="to_currency">Convert To:</label>
+      <select id="to_currency" class="currency__convert-to" aria-label="Filter currency to convert to"></select>
+
+      <button class="convert">Convert Currency</button>
+    </section>
+    <!-- Output areas for currencies -->
+    <section class="section__output">
+      <label for="original_amount">Original Amount:</label>
+      <input id="original_amount" name="original_amount" type="text" disabled />
+
+      <label for="converted_amount">Exchanged Amount:</label>
+      <input id="converted_amount" name="converted_amount" type="text" disabled />
+    </section>
+  </main>
   <footer>
     <p>Compiled by Ifiok Menadio</p>
   </footer>
