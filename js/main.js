@@ -1,6 +1,6 @@
 import Database from './idb-test/index';
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) { 
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
