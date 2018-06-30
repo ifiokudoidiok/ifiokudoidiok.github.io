@@ -3,6 +3,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-size: 42.5%;
+  background-color: silver;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
   font-family: Montserrat, sans-serif;
   min-height: 100vh;
   justify-content: space-around;
-  
+  background-color: silver;
 }
 
 main {
@@ -20,7 +21,7 @@ main {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  background: silver;
+  background-color: silver;
 }
 
 header {
