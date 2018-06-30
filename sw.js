@@ -12,8 +12,16 @@ const filesToCache = [
   './public/css/normalize.min.css',
   './public/js/app.min.js',
   './public/js/app.min.js.map',
+  './public/favicons/android-chrome-192x192.png',
+  './public/favicons/android-chrome-512x512.png',
+  './public/favicons/apple-touch-icon.png',
   './public/favicons/browserconfig.xml',
- 
+  './public/favicons/favicon-16x16.png',
+  './public/favicons/favicon-32x32.png',
+  './public/favicons/favicon.ico',
+  './public/favicons/mstile-150x150.png',
+  './public/favicons/safari-pinned-tab.svg',
+];
 
 /**
  * Cache static files
@@ -26,7 +34,7 @@ self.addEventListener('install', e => {
       return cache.addAll(filesToCache);
     }),
   );
-})
+});
 
 /**
  *  Purge previous cache after activating the next cache
