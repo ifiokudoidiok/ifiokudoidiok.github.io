@@ -26,7 +26,7 @@ self.addEventListener('install', e => {
       return cache.addAll(filesToCache);
     }),
   );
-});
+})
 
 /**
  *  Purge previous cache after activating the next cache
