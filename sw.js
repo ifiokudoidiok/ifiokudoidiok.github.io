@@ -4,7 +4,7 @@
 const cacheName = 'static-cache-v2';
 
 const filesToCache = [
-  '/ALC-7DaysofCodeChallenge/',
+  '/ifiokudoidiok.github.io/',
   './index.html',
   './manifest.json',
   './public/css/styles.min.css',
