@@ -1,10 +1,20 @@
 const cacheName = 'converter-cache-v7';
 const urlsToCache = [
+    '/ifiokudoidiok.github.io/'
     'index.html',
     'main.css',
     'https://free.currencyconverterapi.com/api/v5/currencies'
 ];
 
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((registration)=>{
+            
+        })
+        .catch((error)=>{
+            console.log('Regstration Failed: ', error);
+        });
+}
 self.addEventListener('install', (event)=>{
     event.waitUntil(
         caches.open(cacheName)
