@@ -6,7 +6,6 @@ html {
 }
 
 body {
-  background-color: silver;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -67,7 +66,7 @@ input[type="number"] {
 
 input[type="text"]:disabled {
   color: #000;
-  background: green;
+  background: lightblue;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -87,8 +86,8 @@ button {
 button:hover,
 button:focus,
 button:active {
-  background: hsla(104, 69%, 20%, 0.3);
-  border-color: hsla(104, 69%, 20%, 0.3);
+  background: hsl(185, 57%, 36%);
+  border-color: hsl(185, 57%, 36%);
 }
 
 footer {

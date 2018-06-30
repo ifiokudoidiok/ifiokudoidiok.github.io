@@ -6,26 +6,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="This is the Currency Converter project in the Andela with Google Scholarship Program.">
-  <meta name="author" content="A-J Roos">
   <link rel="manifest" href="manifest.json">
 
   <title>Currency Converter</title>
 
+  <!-- Favicon Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="public/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="public/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="public/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
+  <!-- Main CSS Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/styles.min.css" type="text/css">
 </head>
 
 <body>
   <!-- Main HTML Markup -->
   <header>
-    <h1>ALC Currency Converter</h1>
-    <h2>Choose the respective currencies </h2>
+    <h1>Currency Converter</h1>
+    <h2>Choose the currencies you want to convert.</h2>
   </header>
 
   <main>
     <section class="section__input">
       <!-- Input field for the amount to be converted -->
-      <label for="amount">Input the amount:</label>
-      <input id="amount" name="amount" type="number" placeholder="Enter amount" min="1.0" value="1.00" />
+      <label for="amount">Enter an amount:</label>
+      <input id="amount" name="amount" type="number" placeholder="Enter amount" min="1" value="1" />
 
       <!-- Currency Select Fields -->
       <label for="from_currency">Convert From:</label>
@@ -46,7 +58,7 @@
     </section>
   </main>
   <footer>
-    <p>Compiled by Ifiok Menadio</p>
+    <p>Powered by Ifiok Menadio</p>
   </footer>
 
   <!-- JavaScript Script Files -->
