@@ -1,15 +1,15 @@
 /**
  * Create cache when SW installs
  */
-const dataCacheName = 'currency-api-v3';
-const cacheName = 'static-cache-v3';
+const cacheName = 'static-cache-v2';
 
 const filesToCache = [
-  '/ALC-7DaysofCodeChallenge/', // This root url caches normalize.css and google fonts
+  '/ALC-7DaysofCodeChallenge/',
   './index.html',
   './manifest.json',
   './public/css/styles.min.css',
   './public/css/styles.min.css.map',
+  './public/css/normalize.min.css',
   './public/js/app.min.js',
   './public/js/app.min.js.map',
   './public/favicons/android-chrome-192x192.png',
@@ -23,6 +23,9 @@ const filesToCache = [
   './public/favicons/safari-pinned-tab.svg',
 ];
 
+/**
+ * Cache static files
+ */
 self.addEventListener('install', e => {
   console.log('[ServiceWorker] Install');
   e.waitUntil(
@@ -55,24 +58,9 @@ self.addEventListener('activate', e => {
  * Serve app from cache if there is a cached version
  */
 self.addEventListener('fetch', event => {
-  const dataUrl = 'https://free.currencyconverterapi.com/api/v5/currencies';
-
-  // If contacting API, fetch and then cache the new data
-  if (event.request.url.indexOf(dataUrl) === 0) {
-    event.respondWith(
-      fetch(event.request).then(response =>
-        caches.open(dataCacheName).then(cache => {
-          cache.put(event.request.url, response.clone());
-          return response;
-        }),
-      ),
-    );
-  } else {
-    // Respond with cached content if they are matched
-    event.respondWith(
-      caches
-        .match(event.request)
-        .then(response => response || fetch(event.request)),
-    );
-  }
+  event.respondWith(
+    caches
+      .match(event.request)
+      .then(response => response || fetch(event.request)),
+  );
 });
