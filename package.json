@@ -1,21 +1,14 @@
 {
-  "name": "currencyconverter",
+  "name": "alc-7daysofcodechallenge",
   "version": "1.0.0",
-  "description": "to convert the currency",
   "main": "",
+  "repository": "git@github.com:ifiokudoidiok/ifiokudoidiok.github.io.git",
+  "author": "Ifiok Menadio <menadioo@gmail.com",
+  "license": "MIT",
   "scripts": {
-   "build": "gulp build",
+    "build": "gulp build",
     "watch": "gulp watch",
     "lint": "eslint . --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ifiokudoidiok/ifiokudoidiok.github.io"
-  },
-  "author": "Ifiok Menadio",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ifiokudoidiok/ifiokudoidiok.github.io/issues"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -44,8 +37,5 @@
     "prettier": "^1.13.6",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  },
-  "homepage": "https://github.com/ifiokudoidiok/ifiokudoidiok.github.io#readme"
-
+  }
 }
-

@@ -1,2 +1,2 @@
-# 7DaysCodeChallenge
-The final task for the Google Africa Challenge
+# ALC-7DaysofCodeChallenge
+This is the Andela with Google final project in the Google Scholarship Program.
