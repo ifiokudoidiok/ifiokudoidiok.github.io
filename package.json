@@ -2,8 +2,8 @@
   "name": "alc-7daysofcodechallenge",
   "version": "1.0.0",
   "main": "",
-  "repository": "git@github.com:Asjas/ALC-7DaysofCodeChallenge.git",
-  "author": "Asjas <asjas@outlook.com>",
+  "repository": "git@github.com:ifiokudoidiok/ifiokudoidiok.github.io",
+  "author": "ifiokudoidiok <ifiok_udoidiok@yahoo.com>",
   "license": "MIT",
   "scripts": {
     "build": "gulp build",
