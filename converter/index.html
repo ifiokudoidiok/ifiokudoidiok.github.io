@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="This is the Currency Converter project in the Andela with Google Scholarship Program.">
+  <link rel="manifest" href="manifest.json">
+
+  <title>ALC Currency Converter</title>
+
+  <!-- Favicon Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="public/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="public/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="public/favicons/browserconfig.xml">
+  <meta name="theme-color" content="silver">
+
+  <!-- Main CSS Styles -->
+  <link rel="stylesheet" href="public/css/normalize.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/styles.min.css" type="text/css">
+</head>
+
+<body>
+  <!--Main HTML Markup -->
+  <header>
+    <h1>Google ALC Currency Converter</h1>
+    <h2>Choose the currencies you want to convert.</h2>
+  </header>
+
+  <main class="menadio">
+    <section class="section__input">
+      <!-- Input field for the amount to be converted -->
+      <label for="amount">Enter an amount:</label>
+      <input id="amount" name="amount" type="number" placeholder="Enter amount" min="1" value="1" />
+
+      <!-- Currency Select Fields -->
+      <label for="from_currency">Convert From:</label>
+      <select id="from_currency" class="currency__convert-from" aria-label="Filter currency to convert from"></select>
+
+      <label for="to_currency">Convert To:</label>
+      <select id="to_currency" class="currency__convert-to" aria-label="Filter currency to convert to"></select>
+
+      <button class="convert">Convert Currency</button>
+    </section>
+    <!-- Output areas for currencies -->
+    <section class="section__output">
+      <label for="original_amount">Original Amount:</label>
+      <input id="original_amount" name="original_amount" type="text" disabled />
+
+      <label for="converted_amount">Exchanged Amount:</label>
+      <input id="converted_amount" name="converted_amount" type="text" disabled />
+    </section>
+  </main>
+  <footer>
+      <p>Powered by Ifiok Menadio</p>
+  </footer>
+
+  <!-- JavaScript Script Files -->
+  <script src="public/js/app.min.js"></script>
+</body>
+
+</html>
